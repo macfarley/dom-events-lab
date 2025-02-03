@@ -47,6 +47,12 @@ calculator.addEventListener('click', (event) => {
   if (event.target.innerText === '=') {
     let termTwo = displayMemory.join('')
     displayMemory = []
+    console.log(termTwo)
+
+    if(operator == ""){
+      total = termTwo
+    }
+    
  
     //if i used + it adds
     if(operator == 'addition'){
@@ -74,6 +80,9 @@ calculator.addEventListener('click', (event) => {
     //Display the result, and save it in case they want to keep doing functions
     display.innerHTML = `${total}`
     displayMemory.push(total)
+    termOne = 0
+    termTwo = 0
+    operator = ''
   }
   
   // Subtraction button
@@ -115,6 +124,8 @@ calculator.addEventListener('click', (event) => {
   if (event.target.innerText === 'C') {
     displayMemory = []
     display.innerHTML = 0
+    operator = ''
+    console.log("clear")
   }
 
 });
