@@ -43,6 +43,8 @@ calculator.addEventListener('click', (event) => {
     console.log(displayMemory); 
   }
 
+/*-------------------------------- Functions --------------------------------*/
+
   // Equal sign = Add all the things in the displayMemory together and calculate
   if (event.target.innerText === '=') {
     let termTwo = displayMemory.join('')
@@ -131,4 +133,3 @@ calculator.addEventListener('click', (event) => {
 });
 
 
-/*-------------------------------- Functions --------------------------------*/
